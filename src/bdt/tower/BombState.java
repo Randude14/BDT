@@ -22,7 +22,7 @@ public class BombState extends TowerState {
 		super(world, x, y);
 		x = world.getPixel(x);
 		y = world.getPixel(y);
-		bomb = new Rectangle(x - 20, y - 20, 70, 70);
+		bomb = new Rectangle(x - 20, y - 20, 100, 100);
 		explode = false;
 		count = 0;
 		time = 3;
@@ -46,7 +46,7 @@ public class BombState extends TowerState {
 
 					if (bomb.intersects(enemy.getBounds())) {
 						game.killEnemy(enemy);
-						// cntr--;
+						cntr--;
 					}
 
 				}
@@ -71,7 +71,7 @@ public class BombState extends TowerState {
 		g.fillRect(x + 5, y + 5, 20, 20);
 		g.setColor(Color.black);
 		int width = metrics.stringWidth(count);
-		g.drawString(count, ((31 - width) / 2) + x, y);
+		g.drawString(count, ((31 - width) / 2) + x, y+20);
 
 		if (explode) {
 			g.setColor(Color.red);

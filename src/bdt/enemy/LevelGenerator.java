@@ -30,6 +30,8 @@ public final class LevelGenerator {
 				}
 
 			}
+			scan.close();
+			System.out.println(list.size());
 			return list;
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -41,12 +43,12 @@ public final class LevelGenerator {
 
 	private static List<Enemy> generateRandomWave(List<Point> path, int level) {
 		List<Enemy> list = new ArrayList<Enemy>();
-		int stop = rand.nextInt(rand.nextInt(level*5));
+		int stop = rand.nextInt(rand.nextInt(level*5)+1);
 		stop += (stop < 20) ? rand.nextInt(level*5) : 20;
 		
 		for(int cntr = 0;cntr < stop;cntr++) {
 			int enemyID = rand.nextInt();
-			Enemy enemy = Enemy.valueOf(enemyID);
+			Enemy enemy = Enemy.valueOf(enemyID).path(path);
 			list.add(enemy);
 		}
 		

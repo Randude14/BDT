@@ -11,7 +11,7 @@ public class GuiMainMenu extends GuiScreen {
 	public GuiMainMenu(MainMenu menu) {
 		this.menu = menu;
 
-		addButton(new GuiButton("SingplePlayer", 1, 75, 250, 450));
+		addButton(new GuiButton("Single Player", 1, 75, 250, 450));
 		addButton(new GuiButton("Level Editor", 2, 75, 290, 450));
 		addButton(new GuiButton("Manage Worlds", 3, 75, 330, 450));
 		addButton(new GuiButton("Exit", 4, 75, 370, 450));

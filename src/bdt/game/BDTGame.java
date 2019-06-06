@@ -117,8 +117,10 @@ public class BDTGame extends GameSession implements Game, Pausable {
 		list.remove(enemy);
 		enemy.hit();
 		List<Enemy> enemies = enemy.getEnemies();
-		list.addAll(enemies);
-		money += 2;
+		if(enemies != null) {
+			list.addAll(enemies);
+		}
+		money += 20;
 	}
 
 	public void spawnEnemy(Enemy enemy) {
@@ -247,7 +249,7 @@ public class BDTGame extends GameSession implements Game, Pausable {
 			}
 
 			else if (money >= tower.getInitialValue()
-					&& !canTowerBePlacedHere(x1, y1)
+					&& canTowerBePlacedHere(x1, y1)
 					&& addTower(tower.towerID, x1, y1)) {
 				money -= tower.getInitialValue();
 			}
