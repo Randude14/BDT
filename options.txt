@@ -1,0 +1,5 @@
+Path Right: 68
+Path Left: 65
+Path Up: 87
+Path Delete: 127
+Path Down: 83
