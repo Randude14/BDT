@@ -414,6 +414,7 @@ public class BDTGame extends GameSession implements Game, Pausable {
 		if (isRoundOver()) {
 			running = false;
 			toolBar.endRound();
+			money += 200;
 		}
 
 	}

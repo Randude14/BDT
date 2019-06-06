@@ -131,7 +131,6 @@ public abstract class Tower implements Renderable {
 	public static final Tower moneyPrinter;
 	public static final Tower detectorTower;
 	public static final Tower bomb;
-	public static final Tower bombTower;
 	public static final Tower spike;
 
 	static {
@@ -141,7 +140,6 @@ public abstract class Tower implements Renderable {
 		moneyPrinter = new MoneyPrinter();
 		detectorTower = new Detector();
 		bomb = new Bomb();
-		bombTower = new BombTower();
 		spike = new Spike();
 	}
 

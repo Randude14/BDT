@@ -16,6 +16,10 @@ public class MoneyPrinter extends Tower {
 
 	public void onRoundEnd(World world, int x, int y) {
 	}
+	
+	public TowerState getTowerState(World world, int x, int y) {
+		return new MoneyTowerState(world, x, y);
+	}
 
 	public int getID() {
 		return 3;
